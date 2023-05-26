@@ -21,11 +21,16 @@ export function generateMetadata({ params }: { params: { id: string } }) {
   if (!post) {
     return {
       title: "Post not found",
+      description: "The page is not found",
     };
   }
 
   return {
     title: post.title,
+    description: post.subtitle,
+    alternates: {
+      canonical: `/posts/${post.id}`,
+    },
   };
 }
 
