@@ -4,12 +4,14 @@ import "./globals.css";
 import { Inter, Oswald } from "next/font/google";
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
+  display: "swap",
   variable: "--font-inter",
 });
 
 const oswald = Oswald({
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
+  display: "swap",
   variable: "--font-oswald",
 });
 
@@ -25,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr">
-      <body className={`${inter.variable} ${oswald.variable} bg-ft-color`}>
+    <html lang="fr" className={`${inter.variable} ${oswald.variable}`}>
+      <body className={`bg-ft-color`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-1">{children}</main>
