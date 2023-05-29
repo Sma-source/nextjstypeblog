@@ -1,12 +1,13 @@
 ---
-title: "Exploring the Sweet World of Cookies"
+title: "Les Etats-Unis et le reste du monde"
 subtitle: "Understanding their Role, Best Practices, and Impact in Web Development"
 author: "Zma"
 date: "2023-03-14"
 tags: ["cookie", "web"]
+image: "/images/usa.svg"
 ---
 
-![Cookie Image](https://example.com/cookie-image.jpg)
+![Cookie Image](https://cdn.pixabay.com/photo/2020/11/28/11/25/cookie-5784367_960_720.png)
 
 ## Introduction
 
