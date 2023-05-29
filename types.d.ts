@@ -5,4 +5,5 @@ type Blogpost = {
   author: string;
   date: string;
   tags: string[];
+  image: string;
 };
