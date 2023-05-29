@@ -81,7 +81,7 @@ export default async function Post({ params }: { params: { id: string } }) {
           {title}{" "}
         </h1>
         <div className="mt-4 flex space-x-4">
-          <Link href="/" className="flex items-center space-x-2 text-sm">
+          <div className="flex items-center space-x-2 text-sm">
             <Image
               src="https://tx.shadcn.com/_next/image?url=%2Fimages%2Favatars%2Fshadcn.png&w=96&q=75"
               width={42}
@@ -93,7 +93,7 @@ export default async function Post({ params }: { params: { id: string } }) {
               <p className="font-medium">{author} </p>
               <p className="text-[12px] text-muted-foreground">@twitter</p>
             </div>
-          </Link>
+          </div>
         </div>
       </div>
       <div className="prose lg:prose-lg font-text">
