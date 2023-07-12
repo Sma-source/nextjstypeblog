@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import localFont from "next/font/local";
 import "./globals.css";
 
 import { Inter, Oswald } from "next/font/google";
@@ -15,6 +16,11 @@ const oswald = Oswald({
   variable: "--font-oswald",
 });
 
+const mitera = localFont({
+  src: "./font/Mitera Regular.ttf",
+  display: "swap",
+  weight: "400",
+});
 export const metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: "Zugzwang",
@@ -27,7 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${oswald.variable}`}>
+    <html
+      lang="fr"
+      className={`${inter.variable} ${oswald.variable} ${mitera.className}`}
+    >
       <body className={`bg-ft-color`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
