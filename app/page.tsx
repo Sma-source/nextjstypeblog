@@ -37,7 +37,7 @@ export default async function Home() {
           <Link
             key={post._id}
             href={`/posts/${post.slug.current}`}
-            className="group relative flex h-48 flex-col overflow-hidden border-l border-gray-300 rounded-sm bg-gray-100  md:h-64 xl:h-[36rem]"
+            className="group relative flex h-64 flex-col overflow-hidden border-l border-gray-300 rounded-sm bg-gray-100  md:h-96 xl:h-[36rem]"
           >
             <img
               src="/images/1.webp"
@@ -49,14 +49,14 @@ export default async function Home() {
             <div className="pointer-events-none absolute inset-0 group-hover:bg-gradient-to-t from-gray-900 to-transparent md:via-transparent"></div>
 
             <div className="relative md:mt-12 p-8">
-              <span className="block text-sm text-gray-900 group-hover:text-gray-200 pb-3">
+              <span className="block text-xs font-text text-gray-900 group-hover:text-gray-200 pb-3">
                 {new Date(post._createdAt).toISOString().split("T")[0]}
               </span>
               <h3 className="mb-2 text-xl md:text-3xl uppercase md:leading-relaxed font-semibold text-black group-hover:text-white transition duration-100">
                 {post.title}
               </h3>
 
-              <p className="font-semibold font-sans text-gray-600 group-hover:text-white group-hover:underline prose max-w-none line-clamp-3 leading-normal">
+              <p className="font-semibold font-text text-gray-900/80 group-hover:text-white group-hover:underline prose-sm max-w-none line-clamp-3 leading-normal">
                 {post.overview}
               </p>
               <svg
