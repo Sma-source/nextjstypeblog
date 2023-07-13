@@ -64,6 +64,8 @@
 .items {
   display: flex;
   flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-items: stretch;
 }
 
 .divider {
@@ -101,7 +103,20 @@
   transform: scale(1.5);
   transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
+a.group:hover .img-overlay {
+  top: -100%;
+}
+.photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5);
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.group:hover .photo {
+  transform: scale(1);
+}
 .item-wrapper:hover img {
   transform: scale(1);
 }
@@ -135,43 +150,17 @@
   display: block;
 }
 
-/* Media queries */
-@media (max-width: 600px) {
-  .item {
-    position: relative;
-    flex: 1 0 100%;
-  }
-  .divider {
-    width: 0;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-  .item {
-    position: relative;
-    flex: 1 0 50%;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1200px) {
-  .item {
-    position: relative;
-    flex: 1 0 33.33%;
-  }
-}
-
-@media (min-width: 1201px) {
-  .item {
-    position: relative;
-    flex: 1 0 25%;
-  }
-}
-
 .item-wrapper:hover .item-copy {
   color: #fff;
 }
 
 .item-copy .id {
+  fill: red;
+  width: 125px;
+  height: 125px;
+}
+
+.id {
   fill: red;
   width: 125px;
   height: 125px;
