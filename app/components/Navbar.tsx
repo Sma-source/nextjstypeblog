@@ -20,7 +20,7 @@ export default function Navbar() {
             </svg>
             <span className="hidden  sm:inline-block titre-blog">Zugzwang</span>
           </Link>
-          <nav className="hidden gap-7 md:flex px-6 font-text">
+          <nav className="hidden gap-7 md:flex px-6 font-sans">
             <Link
               className="flex items-center text-lg font-medium hover:text-foreground/80 sm:text-sm text-foreground/60"
               href="/about"
@@ -69,7 +69,7 @@ export default function Navbar() {
                   </svg>
                   <span className="titre-blog">Zugzwang</span>
                 </Link>
-                <nav className="grid grid-flow-row auto-rows-max text-sm font-text">
+                <nav className="grid grid-flow-row auto-rows-max text-sm font-sans">
                   <Link
                     className="flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline"
                     href="/about"

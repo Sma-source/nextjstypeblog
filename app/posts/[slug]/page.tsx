@@ -1,5 +1,6 @@
 import { Post } from "@/lib/interface";
 import { client } from "@/lib/sanity";
+import { PortableText } from "@portabletext/react";
 
 async function getData(slug: string) {
   const query = `*[_type == "post" && slug.current == "${slug}"][0]`;
@@ -17,28 +18,32 @@ export default async function SlugPage({
   const data = (await getData(params.slug)) as Post;
 
   return (
-    <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-      <header className="pt-6 xl:pb-6">
-        <div className="space-y-1 text-center">
-          <div className="space-y-10">
+    <div className="mx-auto max-w-screen-md px-4 md:px-8">
+      <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
+        <header className="pt-6 xl:pb-6">
+          <div className="space-y-1 text-center">
+            <div className="space-y-10">
+              <div>
+                <p className="text-base font-sans font-medium leading-6 text-gray-800 pb-4">
+                  {new Date(data._createdAt).toISOString().split("T")[0]}
+                </p>
+              </div>
+            </div>
+
             <div>
-              <p className="text-base font-text font-medium leading-6 text-gray-800 pb-4">
-                {new Date(data._createdAt).toISOString().split("T")[0]}
-              </p>
+              <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-5xl md:leading-relaxed">
+                {data.title}
+              </h1>
             </div>
           </div>
+        </header>
 
-          <div>
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-              {data.title}
-            </h1>
+        <div className="divide-y divide-gray-200 pb-7 dark:divide-gray-700 xl:divide-y-0">
+          <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
+            <div className="prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg font-sans">
+              <PortableText value={data.content} components={{}} />
+            </div>
           </div>
-        </div>
-      </header>
-
-      <div className="divide-y divide-gray-200 pb-7 dark:divide-gray-700 xl:divide-y-0">
-        <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-          <div className="prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg"></div>
         </div>
       </div>
     </div>
