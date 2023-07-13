@@ -1,6 +1,8 @@
 import { Post } from "@/lib/interface";
 import { client } from "@/lib/sanity";
+import { urlFor } from "@/lib/sanityImageUrl";
 import { PortableText } from "@portabletext/react";
+import Image from "next/image";
 
 async function getData(slug: string) {
   const query = `*[_type == "post" && slug.current == "${slug}"][0]`;
@@ -16,6 +18,21 @@ export default async function SlugPage({
   params: { slug: string };
 }) {
   const data = (await getData(params.slug)) as Post;
+
+  const PortableTextComponent = {
+    types: {
+      image: ({ value }: { value: any }) => (
+        <Image
+          src={urlFor(value).url()}
+          alt="Image"
+          priority
+          className="rounded-lg"
+          width={800}
+          height={800}
+        />
+      ),
+    },
+  };
 
   return (
     <div className="mx-auto max-w-screen-md px-4 md:px-8">
@@ -41,7 +58,10 @@ export default async function SlugPage({
         <div className="divide-y divide-gray-200 pb-7 dark:divide-gray-700 xl:divide-y-0">
           <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
             <div className="prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg font-sans">
-              <PortableText value={data.content} components={{}} />
+              <PortableText
+                value={data.content}
+                components={PortableTextComponent}
+              />
             </div>
           </div>
         </div>
