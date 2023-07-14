@@ -3,10 +3,19 @@ import Hero from "./components/Hero";
 import Posts from "./components/Posts";
 import { Post } from "../lib/interface";
 import { client } from "../lib/sanity";
+import { urlFor } from "@/lib/sanityImageUrl";
 import Link from "next/link";
 
 async function getData() {
-  const query = `*[_type == "post"]`;
+  const query = `*[_type == "post"] {
+    _id,
+    _createdAt,
+    "image": image.asset->url,
+    title,
+    overview,
+    "slug": slug.current,
+
+  }`;
 
   const data = await client.fetch(query);
 
@@ -15,6 +24,7 @@ async function getData() {
 
 export default async function Home() {
   const data = (await getData()) as Post[];
+
   return (
     <div className="container w-full py-6 lg:py-10">
       {/* <Hero
@@ -36,12 +46,13 @@ export default async function Home() {
         {data.map((post) => (
           <Link
             key={post._id}
-            href={`/posts/${post.slug.current}`}
+            href={`/posts/${post.slug}`}
             className="group relative flex h-64 flex-col overflow-hidden border-l border-gray-300 rounded-sm bg-gray-100  md:h-96 xl:h-[36rem]"
           >
-            <img
-              src="/images/1.webp"
-              loading="lazy"
+            <Image
+              src={post.image}
+              priority
+              fill
               alt="Photo by Minh Pham"
               className="photo brightness-75"
             />
