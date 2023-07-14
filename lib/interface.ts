@@ -1,4 +1,5 @@
 export interface Post {
+  image: string;
   title: string;
   overview: string;
   content: any;
