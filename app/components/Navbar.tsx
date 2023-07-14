@@ -30,7 +30,7 @@ export default function Navbar() {
 
             <Link
               className="flex items-center text-lg font-medium hover:text-foreground/80 sm:text-sm text-foreground/60"
-              href="/docs"
+              href="/contact"
             >
               Contact
             </Link>
@@ -79,10 +79,10 @@ export default function Navbar() {
                   </Link>
                   <Link
                     className="flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline"
-                    href="/docs"
+                    href="/contact"
                     onClick={() => setToggleDropdown(false)}
                   >
-                    Documentation
+                    Contact
                   </Link>
                 </nav>
               </div>
