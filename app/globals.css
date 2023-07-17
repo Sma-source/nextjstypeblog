@@ -8,7 +8,9 @@
   font-weight: 400;
   font-style: normal;
 }
-
+p {
+  font-family: sans-serif;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -48,6 +50,7 @@
   font-family: "Mitera";
 }
 /* post card */
+
 .nav {
   position: fixed;
   width: 100%;
@@ -161,7 +164,7 @@ a.group:hover .img-overlay {
 }
 
 .id {
-  fill: red;
+  fill: #990f3d;
   width: 125px;
   height: 125px;
 }
