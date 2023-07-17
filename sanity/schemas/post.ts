@@ -5,8 +5,18 @@ export default {
   fields: [
     {
       name: 'image',
-      type: 'url',
       title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string',
+        },
+      ],
     },
     {
       name: 'title',
