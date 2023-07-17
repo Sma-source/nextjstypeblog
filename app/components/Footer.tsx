@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="mb-4 lg:-mt-2">
               <a
                 href="/"
-                className="titre-blog inline-flex items-center gap-2 text-xl font-bold text-black md:text-xl"
+                className="titre-blog inline-flex items-center gap-2 sm:text-lg font-bold text-black md:text-xl"
                 aria-label="logo"
               >
                 <svg
