@@ -180,19 +180,19 @@ export default function Footer() {
               <div>
                 <Link
                   href="/cgu"
-                  className="text-gray-500 transition duration-100 hover:text-[#990f3d] active:text-indigo-600"
+                  className="text-gray-500 transition duration-100 hover:text-[#990f3d]"
                 >
                   CGU
                 </Link>
               </div>
 
               <div>
-                <a
-                  href="#"
-                  className="text-gray-500 transition duration-100 hover:text-[#990f3d] active:text-indigo-600"
+                <Link
+                  href="/info-cookies"
+                  className="text-gray-500 transition duration-100 hover:text-[#990f3d]"
                 >
                   Info Cookies
-                </a>
+                </Link>
               </div>
             </nav>
           </div>
