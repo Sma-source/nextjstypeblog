@@ -4,7 +4,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div className="pt-4 sm:pt-10 lg:pt-12 container w-full py-6 lg:py-10">
-      <footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <footer className="mx-auto max-w-screen-2xl px-4 md:px-1">
         <div className="mb-16 grid grid-cols-2 gap-12 border-t pt-10 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 lg:pt-12">
           <div className="col-span-full lg:col-span-2">
             {/* <!-- logo - start --> */}
@@ -161,7 +161,7 @@ export default function Footer() {
             <nav className="flex flex-col gap-4">
               <div>
                 <a
-                  href="#"
+                  href="/politique-de-confidentialite"
                   className="text-gray-500 transition duration-100 hover:text-[#990f3d] active:text-indigo-600"
                 >
                   Confidentialité
