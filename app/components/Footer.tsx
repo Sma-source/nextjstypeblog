@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -113,39 +114,39 @@ export default function Footer() {
 
             <nav className="flex flex-col gap-4">
               <div>
-                <a
-                  href="#"
-                  className="text-gray-500 transition duration-100 hover:text-[#990f3d] active:text-indigo-600"
+                <Link
+                  href="/"
+                  className="text-gray-500 transition duration-100 hover:text-[#990f3d] "
                 >
                   Accueil
-                </a>
+                </Link>
               </div>
 
               <div>
-                <a
-                  href="#"
-                  className="text-gray-500 transition duration-100 hover:text-[#990f3d] active:text-indigo-600"
+                <Link
+                  href="/about"
+                  className="text-gray-500 transition duration-100 hover:text-[#990f3d]"
                 >
                   A Propos
-                </a>
+                </Link>
               </div>
 
               <div>
-                <a
-                  href="#"
-                  className="text-gray-500 transition duration-100 hover:text-[#990f3d] active:text-indigo-600"
+                <Link
+                  href="/contact"
+                  className="text-gray-500 transition duration-100 hover:text-[#990f3d]"
                 >
                   Contact
-                </a>
+                </Link>
               </div>
 
               <div>
-                <a
-                  href="#"
-                  className="text-gray-500 transition duration-100 hover:text-[#990f3d] active:text-indigo-600"
+                <Link
+                  href="/contact"
+                  className="text-gray-500 transition duration-100 hover:text-[#990f3d]"
                 >
                   Contribution
-                </a>
+                </Link>
               </div>
             </nav>
           </div>
@@ -154,7 +155,7 @@ export default function Footer() {
           {/* <!-- nav - start --> */}
           <div>
             <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">
-              Legal
+              Légale
             </div>
 
             <nav className="flex flex-col gap-4">
