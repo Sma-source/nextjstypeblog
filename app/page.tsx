@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Hero from "./components/Hero";
-import Posts from "./components/Posts";
 import { Post } from "../lib/interface";
 import { client } from "../lib/sanity";
-import { urlFor } from "@/lib/sanityImageUrl";
 import Link from "next/link";
+import getFormatedDate from "@/lib/getFormatedDate";
+import Banner from "./components/Banner";
 
 async function getData() {
   const query = `*[_type == "post"] {
@@ -27,6 +26,7 @@ export default async function Home() {
 
   return (
     <div className="container w-full py-6 lg:py-10">
+      <Banner />
       {/* <Hero
         titre={
           "Éclairages Géopolitiques dans le Monde des Nouvelles Technologies"
@@ -61,9 +61,10 @@ export default async function Home() {
 
             <div className="relative md:mt-12 p-8">
               <span className="block text-xs font-sans text-gray-900 group-hover:text-gray-200 pb-3">
-                {new Date(post._createdAt).toISOString().split("T")[0]}
+                {/* {new Date(post._createdAt).toISOString().split("T")[0]} */}
+                {getFormatedDate(post._createdAt)}
               </span>
-              <h3 className="mb-2 text-xl md:text-3xl uppercase md:leading-relaxed font-semibold text-black group-hover:text-white transition duration-100">
+              <h3 className="titre-blog mb-2 text-xl md:text-3xl uppercase md:leading-relaxed font-semibold text-black group-hover:text-white transition duration-100">
                 {post.title}
               </h3>
 
@@ -71,7 +72,7 @@ export default async function Home() {
                 {post.overview}
               </p>
               <svg
-                fill="#FF0000"
+                fill="#990f3d"
                 width="24"
                 height="24"
                 viewBox="0 0 32 32"
