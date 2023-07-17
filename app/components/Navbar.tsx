@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="flex gap-6 md:gap-10">
           <Link className="hidden items-center space-x-2 md:flex" href="/">
             <svg
-              fill="#FF0000"
+              fill="#990f3d"
               width="24"
               height="24"
               viewBox="0 0 32 32"
@@ -20,19 +20,31 @@ export default function Navbar() {
             </svg>
             <span className="hidden  sm:inline-block titre-blog">Zugzwang</span>
           </Link>
-          <nav className="hidden gap-7 md:flex px-6 font-sans">
+          <nav className="hidden gap-7 md:flex px-6">
             <Link
-              className="flex items-center text-lg font-medium hover:text-foreground/80 sm:text-sm text-foreground/60"
+              className="flex items-center font-semibold  hover:text-foreground/80 sm:text-sm text-gray-500"
+              href="/"
+            >
+              Accueil
+            </Link>
+            <Link
+              className="flex items-center font-semibold  hover:text-foreground/80 sm:text-sm text-gray-500"
               href="/about"
             >
-              About
+              A Propos
             </Link>
 
             <Link
-              className="flex items-center text-lg font-medium hover:text-foreground/80 sm:text-sm text-foreground/60"
+              className="flex items-center font-semibold  hover:text-foreground/80 sm:text-sm text-gray-500"
               href="/contact"
             >
               Contact
+            </Link>
+            <Link
+              className="flex items-center font-semibold  hover:text-foreground/80 sm:text-sm text-gray-500"
+              href="/contact"
+            >
+              Contribution
             </Link>
           </nav>
           <button
