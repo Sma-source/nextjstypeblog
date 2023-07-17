@@ -178,12 +178,12 @@ export default function Footer() {
               </div>
 
               <div>
-                <a
-                  href="#"
+                <Link
+                  href="/cgu"
                   className="text-gray-500 transition duration-100 hover:text-[#990f3d] active:text-indigo-600"
                 >
                   CGU
-                </a>
+                </Link>
               </div>
 
               <div>
