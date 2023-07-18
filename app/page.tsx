@@ -3,7 +3,7 @@ import { Post } from "../lib/interface";
 import { client } from "../lib/sanity";
 import Link from "next/link";
 import getFormatedDate from "@/lib/getFormatedDate";
-import Banner from "./components/Banner";
+import { Banner } from "./components";
 
 async function getData() {
   const query = `*[_type == "post"] {
