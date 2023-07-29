@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@portabletext/react": "^3.0.4",
     "@sanity/image-url": "^1.0.2",
     "@types/node": "20.2.1",
@@ -29,6 +30,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9"
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/mailchimp__mailchimp_marketing": "^3.0.10"
   }
 }

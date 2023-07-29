@@ -170,7 +170,7 @@ export default function Footer() {
 
               <div>
                 <a
-                  href="#"
+                  href="/mentions-legales"
                   className="text-gray-500 transition duration-100 hover:text-[#990f3d] active:text-indigo-600"
                 >
                   Mentions légales
