@@ -48,21 +48,8 @@ export default function Banner() {
               </form> */}
 
               <p className="text-center text-xs text-gray-400 sm:text-left">
-                By signing up to our newsletter you agree to our{" "}
-                <a
-                  href="#"
-                  className="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                >
-                  Term of Service
-                </a>{" "}
-                and{" "}
-                <a
-                  href="#"
-                  className="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                >
-                  Privacy Policy
-                </a>
-                .
+                Nous ne partageons pas votre adresse mail, pas de publicités,
+                pas de spams.
               </p>
               {/* <div className="relative items-center w-full mx-auto max-w-7xl mt-2">
                 <div className="p-2 border-l-4 border-[#990f3d]  rounded-r-xl bg-white">
