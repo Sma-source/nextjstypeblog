@@ -6,6 +6,7 @@ import { PortableText } from "@portabletext/react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "@/app/components/Button";
 
 async function getData(slug: string) {
   const query = `*[_type == "post" && slug.current == "${slug}"][0]`;
@@ -79,7 +80,10 @@ export default async function SlugPage({
               <div className="block">
                 <ul className="flex items-center list-none">
                   <li className="mr-1.5 py-0.5 min-w-min relative inline-block text-center">
-                    <button
+                    {/* <button
+                      onClick={() => {
+                        navigator.clipboard.writeText(window.location.pathname);
+                      }}
                       title="Copier le lien"
                       className="flex w-auto py-2 px-3 text-sm leading-snug h-auto min-w-[123px] text-center cursor-pointer place-content-center text-[#990f3d] bg-white rounded-xl"
                     >
@@ -97,7 +101,8 @@ export default async function SlugPage({
                         </svg>
                       </span>
                       <span className="block">Copier le lien</span>
-                    </button>
+                    </button> */}
+                    <Button />
                   </li>
                   <li className="inline-block text-center">
                     <Link
