@@ -1,4 +1,7 @@
 import React from "react";
+export const metadata = {
+  title: "Informations Cookies",
+};
 
 export default function InfoCookies() {
   return (
