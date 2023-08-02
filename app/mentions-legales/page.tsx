@@ -1,4 +1,7 @@
 import React from "react";
+export const metadata = {
+  title: "Mentions Légales",
+};
 
 export default function MentionsLegales() {
   return (
